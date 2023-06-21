@@ -4,16 +4,19 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route("/home")
+@app.route("/cart")
+@app.route("/login")
+@app.route("/map")
 
 def home():
     return render_template("index.html")
+def cart():
+    return render_template("cart.html")
+def login():
+    return render_template("login.html")
+def map():
+    return render_template("map.html")
 
 
-@app.route("/result")
-def reuslt():
-    output = request.form.to_dict()
-    name = output[""]
-    
-    return render_template("index.html")
 if __name__ =='__main__':
     app.run(debug=True,port=5001)
