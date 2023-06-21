@@ -27,14 +27,16 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-                <form action="{{ url_for('register') }}" method="post">
+                <form action="{{ url_for('register') }}" method="POST">
                     <div class="msg">{{ msg }}</div>
                       <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
                       <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+                      <input id="password2" name="Repeat password" type="password" placeholder="Repeat Password" class="textbox"/></br></br>
                       <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
                       <input type="submit" class="btn" value="Sign Up"></br>
                   </form>
             </div>
+            <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
           </div>
         </div>
       </div>

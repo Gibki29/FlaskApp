@@ -1,10 +1,23 @@
-from flask import Flask,render_template, request,redirect, url_for, session
-from flask_mysqldb import MySQL
-import MySQLdb.cursors
-import re
+from flask import Flask,render_template, request,redirect, url_for, session, flash
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///baza.db"
+db = SQLAlchemy(app)
+app.app_context().push()
 
+    
+class Client(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), unique=True, nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+    firstname = db.Column(db.String(100), nullable=False)
+    lastname = db.Column(db.String(100), nullable=False)
+    number = db.Column(db.String(100), nullable=False)
+with app.app_context():
+    db.create_all()
+Client.query.all()
 @app.route("/")
 @app.route("/home")
 def home():
@@ -12,9 +25,6 @@ def home():
 @app.route("/cart")
 def cart():
     return render_template("cart.html")
-# @app.route("/login")
-# def login():
-# return render_template("login.html")
 @app.route("/map")
 def map():
     return render_template("map.html")
@@ -24,47 +34,42 @@ def map():
 
 @app.route('/login', methods =['GET', 'POST'])
 def login():
-    msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
-        password = request.form['password']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM accounts WHERE username = % s AND password = % s', (username, password, ))
-        account = cursor.fetchone()
-        if account:
-            session['loggedin'] = True
-            session['id'] = account['id']
-            session['username'] = account['username']
-            msg = 'Logged in successfully !'
-            return render_template('index.html', msg = msg)
-        else:
-            msg = 'Incorrect username / password !'
-    return render_template('login.html', msg = msg)
+    email_input = request.form.get('email')
+    password_input = request.form.get('password')
+    login_instance =Login()
+    login_instance.log_in(email_input, password_input)
+    login_instance.show_status()
+    if session['login_session']:
+        return redirect('/')
+    print()
+    return redirect('/login')
 
 @app.route('/register', methods =['GET', 'POST'])
 def register():
-    msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form :
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM accounts WHERE username = % s', (username, ))
-        account = cursor.fetchone()
-        if account:
-            msg = 'Account already exists !'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'Invalid email address !'
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            msg = 'Username must contain only characters and numbers !'
-        elif not username or not password or not email:
-            msg = 'Please fill out the form !'
-        else:
-            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s)', (username, password, email, ))
-            mysql.connection.commit()
-            msg = 'You have successfully registered !'
-    elif request.method == 'POST':
-        msg = 'Please fill out the form !'
-    return render_template('register.html', msg = msg)
+   email = request.form.get('email')
+   password = request.form.get('password')
+   password_2 = request.form.get('Repeat Rassword')
+   firstname = request.form.get('Firstname')
+   lastname = request.form.get('Lastname')
+   number = request.form.get('number')
+   print(Client.query.all())
+   if len(password) <4:
+       flash("Password is too short",'error')
+       return redirect('/register')
+   
+   if password != password_2:
+       flash("Password must be the same",'error')
+       return redirect('/register')
+   
+   if Client.query.fitler_by(email=email).first():
+       flash('This email is occupied','error')
+       return redirect('/register')
+   
+   new_client = Client(email=email, password=password, firstname=firstname, lastname=lastname, number=number)
+   db.session.add(new_client)
+   db.session.commit()
+   flash('register successfully')
+   return redirect('login')
+
 if __name__ =='__main__':
     app.run(debug=True,port=5001)
