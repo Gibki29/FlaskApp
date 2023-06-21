@@ -12,19 +12,16 @@
   </head>
   <body>
 <!--Header menu-->
-    <div class="container">
-        <header class="d-flex justify-content-center py-3">
-          <ul class="nav nav-pills position-absolute top-1 start-45">
-            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/cart" class="nav-link">Cart</a></li>
-            <li class="nav-item"><a href="/map" class="nav-link">Map</a></li> 
-            <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
-          </ul>
-          
-        </header>
-      </div>
+<div class="d-flex justify-content-end">
+  <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/map" class="nav-link"><img src="{{ url_for('static',filename='Map.jpg') }}" width="30" height="30" alt=""></a></li> 
+            <li class="nav-item"><a href="/login" class="nav-link"><img src="{{ url_for('static',filename='Login.jpg') }}" width="30" height="30" alt=""></a></li>
+            <li class="nav-item"><a href="/cart" class="nav-link"><img src="{{ url_for('static',filename='CartICON.jpg') }}" width="30" height="30" alt=""></a></li>
+  </ul> 
+        
+</div>
 <!--Baner-->
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
   <div class="col-md-5  p-lg-3 mx-auto my-3">
     <h1 class="display-3 fw-bold">Nazwa Restauracji</h1>
     <h3 class="fw-normal text-muted mb-3">Motto restauracji</h3>
@@ -35,10 +32,17 @@
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
+<!--Kategorie-->
+<div class="d-flex justify-content-center bg-body-tertiary">
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Burger</a></li>
+    <li class="nav-item"><a href="/cart" class="nav-link">Pizza</a></li>
+    <li class="nav-item"><a href="/map" class="nav-link">Dodatki</a></li> 
+  </ul>
+</div>
 <!--Wybierajka-->
 <div class="album py-5 bg-body-tertiary">
 <div class="container">
-
   <div class="row row-cols-3 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm">
@@ -49,9 +53,9 @@
             <div class="d-flex justify-content-between align-items-center">
               
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BBQ_Burger">
-                  Danie Dnia
-                
-              <small class="text-body-secondary">9 mins</small>
+                  Order
+                </button>
+                <div class="d-inline p-2 bg-dark text-white">9 mins</div>
             </div>
           </div>
         </div>
@@ -66,10 +70,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DanieDnia">
-                    Danie Dnia
+                    Order
                   </button>
                 
-                <small class="text-body-secondary">9 mins</small>
+                  <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -86,10 +90,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef_Zestaw">
-                    Danie Dnia
+                    Order
                   </button>
                 
-                <small class="text-body-secondary">9 mins</small>
+                  <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -107,10 +111,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BBQ_Zestaw">
-                    Danie Dnia
+                    Order
                   </button>
                 
-                <small class="text-body-secondary">9 mins</small>
+                  <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -127,9 +131,9 @@
               <div class="d-flex justify-content-between align-items-center">
                 
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Hawaiian">
-                    Danie Dnia
+                    Order
                   </button>
-                <small class="text-body-secondary">9 mins</small>
+                  <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -145,10 +149,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Chiken">
-                    Danie Dnia
+                    Order
                   </button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -165,10 +169,10 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DanieDnia">
-                  Danie Dnia
+                  Order
                 </button>
               </div>
-              <small class="text-body-secondary">9 mins</small>
+              <div class="d-inline p-2 bg-dark text-white">9 mins</div>
             </div>
           </div>
         </div>
@@ -184,10 +188,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef">
-                    Danie Dnia
+                    Order
                   </button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
@@ -203,10 +207,10 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef_Bacon_Burger">
-                    Danie Dnia
+                    Order
                   </button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                <div class="d-inline p-2 bg-dark text-white">9 mins</div>
               </div>
             </div>
           </div>
