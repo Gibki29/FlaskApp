@@ -25,6 +25,15 @@ def home():
 @app.route("/cart")
 def cart():
     return render_template("cart.html")
+@app.route("/pizza")
+def pizza():
+    return render_template("pizza.html")
+@app.route("/burger")
+def burger():
+    return render_template("burger.html")
+@app.route("/tradycyjna")
+def tradycyjna():
+    return render_template("tradycyjna.html")
 @app.route("/map")
 def map():
     return render_template("map.html")
