@@ -35,9 +35,9 @@
 <!--Kategorie-->
 <div class="d-flex justify-content-center bg-body-tertiary">
   <ul class="nav nav-pills">
-    <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Burger</a></li>
-    <li class="nav-item"><a href="/cart" class="nav-link">Pizza</a></li>
-    <li class="nav-item"><a href="/map" class="nav-link">Dodatki</a></li> 
+    <li class="nav-item"><a href="/" class="nav-link">Burger</a></li>
+    <li class="nav-item"><a href="templates/Pizza" class="nav-link active" aria-current="page">Pizza</a></li>
+    <li class="nav-item"><a href="templates/Tradycyjne" class="nav-link">Tradycyjne</a></li> 
   </ul>
 </div>
 <!--Wybierajka-->
@@ -46,13 +46,13 @@
   <div class="row row-cols-3 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm">
-          <img src="{{ url_for('static',filename='BBQ Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+          <img src="{{ url_for('static',filename='Carbonara Pizza.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
           <div class="card-body">
             <p class="card-text">
               The BBQ burger is a mouthwatering delight featuring a juicy beef patty grilled to perfection, topped with smoky barbecue sauce, melted cheese, crispy bacon, and caramelized onions. It's a tantalizing combination of flavors that will satisfy your cravings for a savory and indulgent burger experience. &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </p>
             <div class="d-flex justify-content-between align-items-center">
               
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BBQ_Burger">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Carbonara Pizza.jpg">
                   Order
                 </button>
                 <div class="d-inline p-2 bg-dark text-white">9 mins</div>
@@ -63,13 +63,13 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Zestaw Cheese Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza 4 cheese, peperoni, tomatoes.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   A cheeseburger is a classic American delicacy consisting of a juicy beef patty topped with melted cheese, sandwiched between soft buns, offering a perfect blend of savory flavors and indulgent satisfaction. It is a mouthwatering culinary creation that has become an enduring symbol of comfort food worldwide. &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </p>
               <div class="d-flex justify-content-between align-items-center">
                 
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DanieDnia">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza 4 cheese, peperoni, tomatoes.jpg">
                     Order
                   </button>
                 
@@ -82,14 +82,14 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Zestaw Beef Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza double cheese, ham, bacon, red paprika and corn.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   A beef burger is a flavorful culinary masterpiece crafted from a succulent beef patty, perfectly seasoned and cooked to perfection, creating a delectable combination of rich, savory taste and satisfying texture. With each juicy bite, the beef burger delivers a hearty and satisfying experience that has made it a beloved choice for burger enthusiasts everywhere.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef_Zestaw">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza double cheese, ham, bacon, red paprika and corn.jpg">
                     Order
                   </button>
                 
@@ -103,14 +103,14 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Zestaw BBQ Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza Funghi.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   Indulge in the mouthwatering delight of a BBQ burger, featuring a flame-grilled beef patty generously slathered with tangy barbecue sauce, topped with melted cheese and crispy bacon, all nestled between soft buns. Accompanied by a side of golden fries and a refreshing Coca-Cola, this combination of smoky, savory flavors and classic comfort pairings promises a truly satisfying and quintessentially American dining experience.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BBQ_Zestaw">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza Funghi.jpg">
                     Order
                   </button>
                 
@@ -123,14 +123,14 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Hawaiian Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza Pineapple and salami.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text"> 
                   Transport your taste buds to a tropical paradise with a Hawaiian burger. This delicious creation combines a juicy beef or chicken patty with a slice of sweet grilled pineapple, crispy bacon, and a tangy teriyaki glaze, creating a harmonious blend of savory and sweet flavors that will leave you longing for more. &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Hawaiian">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza Pineapple and salami.jpg">
                     Order
                   </button>
                   <div class="d-inline p-2 bg-dark text-white">9 mins</div>
@@ -142,13 +142,13 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Chiken Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza Salami, double cheese and mushrooms.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   A chicken burger is a flavorful alternative to its beef counterpart, featuring a tender and juicy chicken patty seasoned to perfection. Served between soft buns with an array of toppings, it offers a lighter yet satisfying option that caters to both poultry lovers and those seeking a delicious twist on the classic burger experience.&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Chiken">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza Salami, double cheese and mushrooms.jpg">
                     Order
                   </button>
                 </div>
@@ -181,13 +181,13 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Beef Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza with brooccoli salami corn shrooms and tomatoes.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   A beef burger is a juicy and flavorful delight, made from a perfectly seasoned beef patty cooked to perfection. Sandwiched between soft buns and customizable with an array of toppings, it offers a satisfying and hearty dining experience that celebrates the rich taste of high-quality beef.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="Pizza with brooccoli salami corn shrooms and tomatoes.jpg">
                     Order
                   </button>
                 </div>
@@ -200,13 +200,13 @@
   <div class="col">
       <div class="col">
           <div class="card shadow-sm">
-            <img src="{{ url_for('static',filename='Beef Bacon Burger.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
+            <img src="{{ url_for('static',filename='Pizza Salami.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt="Image Description">
             <div class="card-body">
               <p class="card-text">
                   The beef bacon burger is an irresistible fusion of savory flavors, combining a juicy beef patty with crispy bacon made from flavorful beef. With each bite, you'll savor the perfect balance of meaty goodness and smoky undertones, creating a mouthwatering burger experience that is sure to delight any bacon lover.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Beef_Bacon_Burger">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Pizza Salami.jpg">
                     Order
                   </button>
                 </div>
@@ -242,15 +242,15 @@
 </div>
 </div>
 <!--Model_Do_BBQ_Burger-->
-<div class="modal fade" id="BBQ_Burger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Carbonara Pizza.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Carbonara Pizza</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Carbonara Pizza.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -260,15 +260,15 @@
 </div>
 </div>
 <!--Model_Do_Beef_Burger-->
-<div class="modal fade" id="Beef" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza 4 cheese, peperoni, tomatoes.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza 4 cheese, peperoni, tomatoes</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza 4 cheese, peperoni, tomatoes.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -278,15 +278,15 @@
 </div>
 </div>
 <!--Model_Do_BBQ_Zestaw-->
-<div class="modal fade" id="BBQ_Zestaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza double cheese, ham, bacon, red paprika and corn.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza double cheese, ham, bacon, red paprika and corn</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza double cheese, ham, bacon, red paprika and corn.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -296,15 +296,15 @@
 </div>
 </div>
 <!--Model_Do_Hawaiian-->
-<div class="modal fade" id="Hawaiian" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza Funghi.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza Funghi.jpg</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza Funghi.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -314,15 +314,15 @@
 </div>
 </div>
 <!--Model_Do_Chicken-->
-<div class="modal fade" id="Chiken" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza Pineapple and salami.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza Pineapple and salami</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza Pineapple and salami.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -332,15 +332,15 @@
 </div>
 </div>
 <!--Model_Do_Beef_Zestaw-->
-<div class="modal fade" id="Beef_Zestaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza Salami, double cheese and mushrooms.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza Salami, double cheese and mushrooms.jpg</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza Salami, double cheese and mushrooms.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -350,15 +350,15 @@
 </div>
 </div>
 <!--Model_Do_Beef_Bacon_Burger-->
-<div class="modal fade" id="Beef_Bacon_Burger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Pizza with brooccoli salami corn shrooms and tomatoes.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-  <h1 class="modal-title fs-5" id="exampleModalLabel">cheeseburger</h1>
+  <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza with brooccoli salami corn shrooms and tomatoes</h1>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="Pizza with brooccoli salami corn shrooms and tomatoes.jpg">
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -367,6 +367,24 @@
 </div>
 </div>
 </div>
+<!--Model_Do_Salami-->
+<div class="modal fade" id="Pizza Salami.jpg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Pizza Salami</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <img src="Pizza Salami.jpg">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Order</button>
+    </div>
+    </div>
+    </div>
+    </div>
 
 
 
