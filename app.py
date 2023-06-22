@@ -55,9 +55,9 @@ def tradycyjna():
 @app.route("/map")
 def map():
     return render_template("map.html")
-
-def map():
-    return render_template("register.html")
+@app.route('/login-form')
+def login_form():
+    return render_template("login.html")
 
 @app.route('/login', methods =['GET', 'POST'])
 def login():
@@ -69,8 +69,10 @@ def login():
     if session['login_session']:
         return redirect('/')
     print()
-    return redirect('/login')
-
+    return render_template('index.html')
+@app.route("/register-form")
+def register_form():
+    render_template('register.html')
 @app.route('/register', methods =['GET', 'POST'])
 def register():
    email = request.form.get('email')
@@ -80,9 +82,9 @@ def register():
    lastname = request.form.get('Lastname')
    number = request.form.get('number')
    print(Client.query.all())
-   if len(password) <4:
+   if len(password) < 4:
        flash("Password is too short",'error')
-       return redirect('/register')
+       return redirect('/register-form')
    
    if password != password_2:
        flash("Password must be the same",'error')
