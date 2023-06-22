@@ -84,15 +84,15 @@ def register():
    print(Client.query.all())
    if len(password) < 4:
        flash("Password is too short",'error')
-       return redirect('/register-form')
+       return render_template('register.html')
    
    if password != password_2:
        flash("Password must be the same",'error')
-       return redirect('/register')
+       return render_template('register.html')
    
    if Client.query.fitler_by(email=email).first():
        flash('This email is occupied','error')
-       return redirect('/register')
+       return render_template('register.html')
    
    new_client = Client(email=email, password=password, firstname=firstname, lastname=lastname, number=number)
    db.session.add(new_client)
