@@ -21,10 +21,10 @@ class Login:
             session['email'] = email_input
             flash("Login Sucsuffly")
         else:
+            session['login_session']=False
             flash("Inccorect email address")
     
-    def show_status(self):
-        return session['login_session']
+
 
 class Client(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -65,7 +65,7 @@ def login():
     password_input = request.form.get('password')
     login_instance =Login()
     login_instance.log_in(email_input, password_input)
-    login_instance.show_status()
+    # login_instance.show_status()
     if session['login_session']:
         return redirect('/')
     print()
