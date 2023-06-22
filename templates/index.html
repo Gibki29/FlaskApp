@@ -232,7 +232,7 @@
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-  <img src="Burger/Cheese">
+  <img src="{{ url_for('static',filename='Cheese Burger.jpg') }}" width="100%" height="225" role="img" >
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -441,6 +441,5 @@ Experience the culinary delights at our restaurant, where every dish is a sympho
       </div>
   </footer>
 </div>
-<script type="text/javascript" src="{%static 'js/cart.js' %}"></script>
 </body>
 </html>

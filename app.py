@@ -6,8 +6,26 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///baza.db"
 db = SQLAlchemy(app)
 app.app_context().push()
+app.config['SECRET_KEY']='dev'
 
+class Login:
+    def check_database(self, email_input, password):
+        client = Client.query.filter_by(email=email_input).first()
+        if client:
+            return client.password == password
+        return False
     
+    def log_in(self, email_input,password):
+        if self.check_database(email_input,password):
+            session['login_session'] =True
+            session['email'] = email_input
+            flash("Login Sucsuffly")
+        else:
+            flash("Inccorect email address")
+    
+    def show_status(self):
+        return session['login_session']
+
 class Client(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True, nullable=False)
